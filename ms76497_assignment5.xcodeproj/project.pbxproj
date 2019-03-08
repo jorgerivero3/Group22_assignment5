@@ -8,11 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		69123D32222C829600C5F486 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69123D31222C829600C5F486 /* AppDelegate.swift */; };
-		69123D34222C829600C5F486 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69123D33222C829600C5F486 /* ViewController.swift */; };
 		69123D37222C829600C5F486 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69123D35222C829600C5F486 /* Main.storyboard */; };
-		69123D39222C829C00C5F486 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69123D38222C829C00C5F486 /* Assets.xcassets */; };
 		69123D3C222C829C00C5F486 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69123D3A222C829C00C5F486 /* LaunchScreen.storyboard */; };
 		69123D47222C829C00C5F486 /* ms76497_assignment5Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69123D46222C829C00C5F486 /* ms76497_assignment5Tests.swift */; };
+		69123D52222C849200C5F486 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69123D51222C849200C5F486 /* Animal.swift */; };
+		69123D54222C8F5400C5F486 /* AnimalsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69123D53222C8F5400C5F486 /* AnimalsTableViewController.swift */; };
+		69123D5A222E02F500C5F486 /* animals.plist in Resources */ = {isa = PBXBuildFile; fileRef = 69123D59222E02F500C5F486 /* animals.plist */; };
+		EC20C3302230DABA00977E94 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC20C32F2230DABA00977E94 /* GalleryViewController.swift */; };
+		EC20C3322230DC8200977E94 /* GalleryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC20C3312230DC8200977E94 /* GalleryItem.swift */; };
+		EC20C3342230E15400977E94 /* Items.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC20C3332230E15400977E94 /* Items.plist */; };
+		EC20C3362230F0A000977E94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC20C3352230F0A000977E94 /* Assets.xcassets */; };
+		ED9281552232E60C0065E2AB /* AnimalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9281542232E60C0065E2AB /* AnimalCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,14 +34,20 @@
 /* Begin PBXFileReference section */
 		69123D2E222C829600C5F486 /* ms76497_assignment5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ms76497_assignment5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69123D31222C829600C5F486 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		69123D33222C829600C5F486 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		69123D36222C829600C5F486 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		69123D38222C829C00C5F486 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69123D3B222C829C00C5F486 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69123D3D222C829C00C5F486 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69123D42222C829C00C5F486 /* ms76497_assignment5Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ms76497_assignment5Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		69123D46222C829C00C5F486 /* ms76497_assignment5Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ms76497_assignment5Tests.swift; sourceTree = "<group>"; };
 		69123D48222C829C00C5F486 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69123D51222C849200C5F486 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
+		69123D53222C8F5400C5F486 /* AnimalsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsTableViewController.swift; sourceTree = "<group>"; };
+		69123D59222E02F500C5F486 /* animals.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = animals.plist; sourceTree = "<group>"; };
+		EC20C32F2230DABA00977E94 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		EC20C3312230DC8200977E94 /* GalleryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryItem.swift; sourceTree = "<group>"; };
+		EC20C3332230E15400977E94 /* Items.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Items.plist; sourceTree = "<group>"; };
+		EC20C3352230F0A000977E94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ED9281542232E60C0065E2AB /* AnimalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +89,18 @@
 		69123D30222C829600C5F486 /* ms76497_assignment5 */ = {
 			isa = PBXGroup;
 			children = (
+				69123D59222E02F500C5F486 /* animals.plist */,
+				EC20C3332230E15400977E94 /* Items.plist */,
 				69123D31222C829600C5F486 /* AppDelegate.swift */,
-				69123D33222C829600C5F486 /* ViewController.swift */,
 				69123D35222C829600C5F486 /* Main.storyboard */,
-				69123D38222C829C00C5F486 /* Assets.xcassets */,
+				ED9281542232E60C0065E2AB /* AnimalCell.swift */,
+				69123D53222C8F5400C5F486 /* AnimalsTableViewController.swift */,
 				69123D3A222C829C00C5F486 /* LaunchScreen.storyboard */,
+				EC20C3352230F0A000977E94 /* Assets.xcassets */,
+				EC20C32F2230DABA00977E94 /* GalleryViewController.swift */,
 				69123D3D222C829C00C5F486 /* Info.plist */,
+				69123D51222C849200C5F486 /* Animal.swift */,
+				EC20C3312230DC8200977E94 /* GalleryItem.swift */,
 			);
 			path = ms76497_assignment5;
 			sourceTree = "<group>";
@@ -177,9 +195,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69123D5A222E02F500C5F486 /* animals.plist in Resources */,
+				EC20C3342230E15400977E94 /* Items.plist in Resources */,
 				69123D3C222C829C00C5F486 /* LaunchScreen.storyboard in Resources */,
-				69123D39222C829C00C5F486 /* Assets.xcassets in Resources */,
 				69123D37222C829600C5F486 /* Main.storyboard in Resources */,
+				EC20C3362230F0A000977E94 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,7 +217,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69123D34222C829600C5F486 /* ViewController.swift in Sources */,
+				EC20C3322230DC8200977E94 /* GalleryItem.swift in Sources */,
+				ED9281552232E60C0065E2AB /* AnimalCell.swift in Sources */,
+				69123D52222C849200C5F486 /* Animal.swift in Sources */,
+				EC20C3302230DABA00977E94 /* GalleryViewController.swift in Sources */,
+				69123D54222C8F5400C5F486 /* AnimalsTableViewController.swift in Sources */,
 				69123D32222C829600C5F486 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,9 +9,23 @@
 import UIKit
 
 class AnimalsTableViewController: UITableViewController {
+    var animals = [Animal]()
+    
+    private func accessPlist() {
+        let inputFile = Bundle.main.path(forResource: "animals", ofType: "plist")
+        let inputDataArray = NSArray(contentsOfFile: inputFile!)
+        var size:Float
+        for input in inputDataArray as! [Dictionary<String, String>] {
+            size=Float(input["size"] ?? "0.0")!
+            animals.append(Animal(name: input["name"] ?? "",scientific_name: input["scientific name"] ?? "",classA: input["class"] ?? "",size: size))
+            
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        accessPlist()
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -24,13 +38,39 @@ class AnimalsTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return animals.count*2
     }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var number: Int
+        number = indexPath.row/2
+        let headline = animals[number]
+        let cell1 = tableView.dequeueReusableCell(withIdentifier: "LabelCell1", for: indexPath)
+        if indexPath.row % 2 == 0 {
+            cell1.textLabel?.text = headline.name
+            cell1.imageView?.image = UIImage(named: headline.name)
+            return cell1
+        } else if indexPath.row % 2 == 1 {
+            let cell2 = tableView.dequeueReusableCell(withIdentifier: "LabelCell2", for: indexPath)
+            cell2.textLabel!.numberOfLines = 3
+            cell2.textLabel?.text = " Scientific Name:     \(headline.scientific_name)\n                   Class:     \(headline.classA)\n                     Size:     \(headline.size)"
+            return cell2
+            
+        }
+        return cell1
+    }
+        
+
+
+        ///cell.detailTextLabel?.text = headline.text
+        ///cell.imageView?.image = UIImage(named: headline.image)
+        
+        
+    
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

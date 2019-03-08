@@ -1,14 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!--
-   Items.plist
-   ms76497_assignment5
-
-   Created by Arvind Ramachandra on 3/6/19.
-   Copyright (c) 2019 Slijepcevic, Milica. All rights reserved.
--->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-    <dict>
-    
-    </dict>
+<array>
+	<dict>
+		<key>name</key>
+		<string>Lion1</string>
+		<key>label</key>
+		<string>&quot;Look at my sharp teeth!&quot;</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Lion2</string>
+		<key>label</key>
+		<string>&quot;I love running!&quot;</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Lion3</string>
+		<key>label</key>
+		<string>&quot;I enjoy being in the sun!&quot;</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Goldfish1</string>
+		<key>label</key>
+		<string>&quot;I swim fast!&quot;</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Goldfish2</string>
+		<key>label</key>
+		<string>&quot;They should call me &apos;Orange&apos; Fish!&quot;</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Goldfish3</string>
+		<key>label</key>
+		<string>&quot;I&apos;m really small!&quot;</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Snake1</string>
+		<key>label</key>
+		<string>&quot;I can see my prey from here!&quot;</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Snake2</string>
+		<key>label</key>
+		<string>&quot;I slither silently!&quot;</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Snake3</string>
+		<key>label</key>
+		<string>&quot;This is my attack position!&quot;</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Giraffe1</string>
+		<key>label</key>
+		<string>&quot;I travel with my family!&quot;</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Giraffe2</string>
+		<key>label</key>
+		<string>&quot;Such a great view!!&quot;</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Giraffe3</string>
+		<key>label</key>
+		<string>&quot;My neck is really looong!&quot;</string>
+	</dict>
+</array>
 </plist>
