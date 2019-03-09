@@ -63,7 +63,10 @@ class AnimalsTableViewController: UITableViewController {
         }
         return cell1
     }
-        
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        <#code#>
+    }
 
 
         ///cell.detailTextLabel?.text = headline.text

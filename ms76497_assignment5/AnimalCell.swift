@@ -9,5 +9,7 @@
 import UIKit
 
 class AnimalCell: UICollectionViewCell {
+    @IBOutlet weak var AnimalQuote: UILabel!
+    @IBOutlet weak var AnimalImage: UIImageView!
     
 }

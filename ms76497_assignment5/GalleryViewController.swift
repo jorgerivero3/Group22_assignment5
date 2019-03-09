@@ -10,36 +10,61 @@ import UIKit
 
 class GalleryViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-
+    static let storyboardIdentifier = "GalleryViewController"
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return Gallery.count
+        return gallery.count
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return Gallery.count
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AnimalCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AnimalCell", for: indexPath) as! AnimalCell
+        
+        let current = gallery[indexPath.row]
+        
+        
+        cell.AnimalQuote.text = current.label
+        cell.AnimalImage.image = current.image
+        
         return cell
     }
     
 
-    var Gallery = [GalleryItem]()
+    var gallery = [GalleryItem]()
     
     private func accessPlist() {
-        let inputFile = Bundle.main.path(forResource: "Items", ofType: "plist")
-        let inputDataArray = NSArray(contentsOfFile: inputFile!)
-        for input in inputDataArray as! [Dictionary<String, String>] {
-            Gallery.append(GalleryItem(name: input["name"] ?? "",label: input["label"] ?? ""))
+        
+        guard let inputFile = Bundle.main.path(forResource: "Items", ofType: "plist") else {
+            fatalError()
+        }
+        
+        let url = URL(fileURLWithPath: inputFile)
+        
+        do {
+            let data = try Data(contentsOf: url)
+            
+            let decoder = PropertyListDecoder()
+            
+            self.gallery = try decoder.decode([GalleryItem].self, from: data)
+        } catch {
+            fatalError(error.localizedDescription)
         }
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         accessPlist()
         
-    
-}
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        
+        collectionView.reloadData()
+    }
     
 
     
