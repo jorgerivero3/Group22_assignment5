@@ -4,7 +4,7 @@
 <array>
 	<dict>
 		<key>name</key>
-		<string>Masai giraffe</string>
+		<string>Giraffe</string>
 		<key>scientific name</key>
 		<string>Giraffa tippelskirchi</string>
 		<key>class</key>
@@ -24,7 +24,7 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Indian cobra</string>
+		<string>Snake</string>
 		<key>scientific name</key>
 		<string>Naja naja</string>
 		<key>class</key>

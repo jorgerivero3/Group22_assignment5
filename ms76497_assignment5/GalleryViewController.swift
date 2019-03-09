@@ -10,12 +10,17 @@ import UIKit
 
 class GalleryViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    //Passed in from Segue
+    var animal: Animal? = nil
+    //Array used to get the appropriate animal info
+    var animalInfo = [GalleryItem]()
+    
     static let storyboardIdentifier = "GalleryViewController"
     
     @IBOutlet weak var collectionView: UICollectionView!
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return gallery.count
+        return 3
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -23,9 +28,25 @@ class GalleryViewController: UIViewController, UICollectionViewDelegate, UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AnimalCell", for: indexPath) as! AnimalCell
         
-        let current = gallery[indexPath.row]
+        switch animal!.name{
+        case "Lion":
+            animalInfo = Array(gallery[0...2])
+        case "Goldfish":
+            animalInfo = Array(gallery[3...5])
+        case "Snake":
+            animalInfo = Array(gallery[6...8])
+        case "Giraffe":
+            animalInfo = Array(gallery[9...11])
+        default:
+            animalInfo = Array(gallery[0...2])
+        }
+        
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AnimalCell", for: indexPath) as! AnimalCell
+        print(animalInfo)
+        let current = animalInfo[indexPath.row]
+        
         
         
         cell.AnimalQuote.text = current.label
@@ -64,6 +85,7 @@ class GalleryViewController: UIViewController, UICollectionViewDelegate, UIColle
         collectionView.dataSource = self
         
         collectionView.reloadData()
+        print(animal?.name)
     }
     
 
